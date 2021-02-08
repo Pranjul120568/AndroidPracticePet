@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#00796B"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pet"
+        android:foregroundGravity="center"
+        android:fitsSystemWindows="true"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:title="New Pet"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:theme="@style/AppTheme.PopupOverlay"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <TextView
+        android:text="Name"
+        android:id="@+id/NameTv"
+        android:textColor="@color/white"
+        android:textStyle="normal"
+        android:textSize="26sp"
+        android:layout_marginTop="44dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Enter the name"
+        app:hintTextColor="@color/colorAccent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/InputNametv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+        android:text="Breed"
+        android:id="@+id/breedTv"
+        android:textColor="@color/white"
+        android:textStyle="normal"
+        android:textSize="26sp"
+        android:layout_marginTop="44dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Enter the breed"
+        app:hintTextColor="@color/colorAccent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/InputBreedTv"
+            android:layout_height="60dp"
+            android:background="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="44dp"
+        android:layout_marginStart="20dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/AgeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="AGE:"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="normal" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:hint="05"
+            app:hintTextColor="@color/colorAccent">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/InputAgeTv"
+                android:layout_width="55dp"
+                android:layout_height="40dp"
+                android:background="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_marginTop="44dp"
+        android:layout_marginEnd="20dp"
+    android:layout_marginStart="20dp"
+    android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/GenderTv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="GENDER:"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="normal" />
+        <Spinner
+            android:id="@+id/spinnergender"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+</LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/SavePet"
+        android:text="Save Pet"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        app:cornerRadius="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="35dp"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+</RelativeLayout>
