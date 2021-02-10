@@ -14,7 +14,6 @@ class PetsDB(context:Context):SQLiteOpenHelper(context,"pets.db",null,1) {
     }
 //This is called when the version of the database is changed
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        TODO("Not yet implemented")
     }
 
 }

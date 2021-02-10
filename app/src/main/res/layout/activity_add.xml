@@ -54,6 +54,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/InputNametv"
             android:layout_width="match_parent"
+            android:textColor="@color/black"
             android:layout_height="60dp"
             android:background="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -77,56 +78,56 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:id="@+id/InputBreedTv"
+            android:textColor="@color/black"
             android:layout_height="60dp"
             android:background="@color/white"/>
     </com.google.android.material.textfield.TextInputLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="44dp"
-        android:layout_marginStart="20dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/AgeTv"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="AGE:"
-            android:textColor="@color/white"
-            android:textSize="26sp"
-            android:textStyle="normal" />
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="55dp"
+
+        <LinearLayout
+            android:layout_width="103dp"
             android:layout_height="40dp"
-            android:hint="05"
-            app:hintTextColor="@color/colorAccent">
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="44dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/AgeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="AGE:"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="normal" />
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/InputAgeTv"
-                android:layout_width="55dp"
-                android:layout_height="40dp"
-                android:background="@color/white" />
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
-    <LinearLayout
-    android:layout_width="match_parent"
-    android:orientation="horizontal"
-    android:layout_marginTop="44dp"
-        android:layout_marginEnd="20dp"
-    android:layout_marginStart="20dp"
-    android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/GenderTv"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="GENDER:"
-            android:textColor="@color/white"
-            android:textSize="26sp"
-            android:textStyle="normal" />
-        <Spinner
-            android:id="@+id/spinnergender"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:hint="94"
+                android:textColor="@color/black" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-</LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp">
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/SpinnerCataegory"
+                android:layout_weight="1"
+                android:layout_marginEnd="16dp"/>
+            <ImageView
+                android:id="@+id/ImageAddCataegory"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/addspinner"
+                app:tint="@color/colorAccent" />
+        </LinearLayout>
     <com.google.android.material.button.MaterialButton
         android:id="@+id/SavePet"
         android:text="Save Pet"
