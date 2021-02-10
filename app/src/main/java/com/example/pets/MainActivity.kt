@@ -12,7 +12,8 @@ class MainActivity : AppCompatActivity() {
         val todos = ArrayList<String>()
         binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
+        binding.Recyclerpet.adapter=PetAdapter()
     }
 
     fun newpet(view: View) {

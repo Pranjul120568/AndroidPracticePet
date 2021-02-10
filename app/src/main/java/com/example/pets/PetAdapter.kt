@@ -19,7 +19,7 @@ class PetAdapter: RecyclerView.Adapter<PetAdapter.PetHolder>() {
         fun bind(item:Pets)= with(itemView){
             findViewById<TextView>(R.id.Dognametv).text=item.name
             findViewById<TextView>(R.id.Breednametv).text=item.breed
-            findViewById<TextView>(R.id.Agenametv).text=item.age.toString()
+            findViewById<TextView>(R.id.Agenametv).text= item.age
             findViewById<TextView>(R.id.Gendernametv).text=item.gender
         }
     }

@@ -14,14 +14,12 @@ object PetsTable {
         val AGE="age"
     }
     //The usage of three quotes is we can add multiple lines in between them
-    val CMD_CREATE="""CREATE TABLE IF NOT EXISTS $TABLE_NAME
-        (
-        ${Columns.ID} INTEGER PRIMARY KEY AUTO INCREMENT,
+    val CMD_CREATE="""CREATE TABLE IF NOT EXISTS $TABLE_NAME(
+        ${Columns.ID} INTEGER PRIMARY KEY AUTOINCREMENT,
         ${Columns.NAME} TEXT,
          ${Columns.BREED} TEXT,
           ${Columns.GENDER} TEXT,
            ${Columns.AGE} INTEGER,
-        
     """.trimMargin()
     //To make the table jump to petsdb and then under onCreate
 // u need to put siome command in order to create the table
@@ -50,7 +48,7 @@ object PetsTable {
                 null,null,null,null,null
         )
         while (c.moveToNext()){
-            val pet=Pets(c.getString(1),c.getString(2),c.getString(3),c.getInt(4))
+            val pet=Pets(c.getString(1),c.getString(2),c.getString(3),c.getString(4))
             petss.add(pet)
         }
         return petss
