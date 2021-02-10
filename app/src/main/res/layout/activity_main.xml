@@ -8,11 +8,40 @@
   <ImageView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:src="@drawable/pet"
-      android:foregroundGravity="center"
+      android:layout_marginTop="56dp"
       android:fitsSystemWindows="true"
       android:focusable="true"
-      android:scaleType="centerCrop" />
+      android:foregroundGravity="center"
+      android:scaleType="centerCrop"
+      android:src="@drawable/pet"
+      tools:ignore="NotSibling" />
+  <com.google.android.material.appbar.MaterialToolbar
+      android:id="@+id/AppBarlayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/colorPrimary"
+      android:orientation="horizontal"
+      android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme.PopupOverlay"
+        app:title="Pets">
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_add_pet" />
+    </androidx.appcompat.widget.Toolbar>
+  </com.google.android.material.appbar.MaterialToolbar>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      tools:listitem="@layout/item_data"
+      android:layout_below="@+id/AppBarlayout" />
   <com.google.android.material.floatingactionbutton.FloatingActionButton
       android:layout_width="70dp"
       android:layout_height="70dp"

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#66BB6A"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Dognametv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="Dog"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Breednametv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Dognametv"
+            android:layout_marginStart="42dp"
+            android:text="Breed"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/Agenametv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Breednametv"
+            android:layout_marginStart="42dp"
+            android:text="01"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/Gendernametv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Agenametv"
+            android:layout_marginStart="42dp"
+            android:text="Male"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="68dp"
+            android:layout_marginBottom="-661dp"
+            android:src="@drawable/ic_add_pet" />
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
