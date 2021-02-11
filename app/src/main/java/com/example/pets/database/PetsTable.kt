@@ -32,7 +32,6 @@ object PetsTable {
         row.put(Columns.GENDER,pets.gender)
         row.put(Columns.BREED,pets.breed)
         row.put(Columns.AGE,pets.age)
-
         db.insert(TABLE_NAME,null,row)
     }
     fun getAllPets(db:SQLiteDatabase):ArrayList<Pets>{
@@ -53,4 +52,5 @@ object PetsTable {
         }
         return petss
     }
+
 }

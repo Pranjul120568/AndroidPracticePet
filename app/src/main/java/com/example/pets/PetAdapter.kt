@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class PetAdapter: RecyclerView.Adapter<PetAdapter.PetHolder>() {
-    private val data= ArrayList<Pets>()
+class PetAdapter(private val data: ArrayList<Pets> = ArrayList<Pets>()): RecyclerView.Adapter<PetAdapter.PetHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PetHolder {
         return PetHolder(
                 LayoutInflater.from(parent.context).inflate(R.layout.item_data,parent,false)

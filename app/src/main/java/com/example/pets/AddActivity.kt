@@ -19,9 +19,6 @@ import com.example.pets.databinding.ActivityAddBinding
         setContentView(binding.root)
         val db= PetsDB(this).writableDatabase
         setUpSpinner()
-        fun refreshTodoList(){
-            PetsTable.getAllPets(db)
-        }
         binding.SavePet.setOnClickListener {
             val newPet=Pets(
                     binding.InputNametv.text.toString(),
@@ -30,15 +27,12 @@ import com.example.pets.databinding.ActivityAddBinding
                     binding.InputAgeTv.toString()
                     )
             PetsTable.insertPet(db,newPet)
-            refreshTodoList()
+                    finish()
         }
-
     }
-
     private fun setUpSpinner() {
         val petadapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, genders)
         genders.sort()
         binding.SpinnerCataegory.adapter = petadapter
     }
-
 }
